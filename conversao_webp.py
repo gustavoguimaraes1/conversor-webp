@@ -5,7 +5,6 @@ from io import BytesIO
 from PIL import Image
 import cairosvg
 
-
 # Configurações
 PASTA = Path("public/images")
 EXTENSOES = {".png", ".jpg", ".jpeg", ".svg"}
@@ -15,7 +14,6 @@ REMOVER_ORIGINAIS = False
 
 convertidas = 0
 erros = 0
-
 
 def converter_imagem(arquivo):
     destino = arquivo.with_suffix(".webp")
@@ -64,7 +62,6 @@ def converter_imagem(arquivo):
     except Exception as erro:
         print(f"[ERRO] {arquivo}: {erro}")
         return None
-
 
 def main():
     global convertidas, erros
